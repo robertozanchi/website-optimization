@@ -52,5 +52,9 @@ The following steps were taken to optimize loading of index.html, to achieve a P
 
 To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js. 
 
+######Pizza sizes
+
+
 1. Updated changePizzaSizes()
 
+######Sliding pizzas in the background
