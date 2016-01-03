@@ -26,7 +26,7 @@ Some useful tips to help you get started:
 
 ###Optimization
 
-####Optimize Critical Rendering Path for index.html
+####Critical Rendering Path for index.html
 
 The following steps were taken to optimize loading of index.html, to achieve a PageSpeed Insights score > 90:
 
@@ -48,7 +48,7 @@ The following steps were taken to optimize loading of index.html, to achieve a P
 
 1. Resize pizzeria.jpeg
 
-####Part 2: Optimize Frames per Second in pizza.html
+####Frames per Second in pizza.html
 
 To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js. 
 
