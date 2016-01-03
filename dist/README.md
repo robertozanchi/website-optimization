@@ -44,11 +44,11 @@ The following steps were taken to optimize loading of index.html, to achieve a P
 
 1. Set async property on ```<script src="http://www.google-analytics.com/analytics.js"></script>```
 
-######Leverage Browser Caching
+######Browser Caching
 
 https://developers.google.com/speed/docs/insights/LeverageBrowserCaching
 
-######Optimize images
+######Images
 
 1. Resize pizzeria.jpeg
 
