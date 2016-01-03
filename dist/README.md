@@ -30,15 +30,15 @@ Some useful tips to help you get started:
 
 The following steps were taken to optimize loading of index.html, to achieve a PageSpeed Insights score > 90:
 
-1. Moved both Google Analytics scripts to the end of the page body
-
-1. Set async property on ```<script src="http://www.google-analytics.com/analytics.js"></script>```
-
 1. Replaced CSS in style.css with [minified CSS](http://www.cleancss.com/css-minify/) placed into the page head
 
 1. Added media query ```media="print"``` to print.css
 
 1. Loaded Google Fonts asyncronously [using JavaScript](https://www.lockedowndesign.com/load-google-fonts-asynchronously-for-page-speed/)
+
+1. Moved both Google Analytics scripts to the end of the page body
+
+1. Set async property on ```<script src="http://www.google-analytics.com/analytics.js"></script>```
 
 ####Part 2: Optimize Frames per Second in pizza.html
 
