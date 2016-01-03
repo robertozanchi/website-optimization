@@ -28,11 +28,15 @@ Some useful tips to help you get started:
 
 ####Part 1: Optimize Critical Rendering Path for index.html
 
-1. Move <script src="http://www.google-analytics.com/analytics.js"></script> to end of document + make async
-1. Move other JS script to end
-1. Replace style.css with internal style sheet into page head, using minifed CSS. Source: http://www.cleancss.com/css-minify/
-1. Add media query to print css
-1. Load Google Fonts asyncronously. Source: https://www.lockedowndesign.com/load-google-fonts-asynchronously-for-page-speed/
+1. Moved both Google Analytics scripts to the end of the page body
+
+1. Set async property on ```<script src="http://www.google-analytics.com/analytics.js"></script>```
+
+1. Replaced CSS in style.css with [minified CSS](http://www.cleancss.com/css-minify/) placed into the page head
+
+1. Added media query ```media="print"``` to print.css
+
+1. Loaded Google Fonts asyncronously [using JavaScript](https://www.lockedowndesign.com/load-google-fonts-asynchronously-for-page-speed/)
 
 ####Part 2: Optimize Frames per Second in pizza.html
 
