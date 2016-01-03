@@ -6,7 +6,7 @@ Your challenge, if you wish to accept it (and we sure hope you will), is to opti
 
 Some useful tips to help you get started:
 
-1. Clone or donwload the [repository from GitHub](https://github.com/robertozanchi/website-optimization) and copy the ```disr``` directory on your local machine
+1. Clone or donwload the [repository from GitHub](https://github.com/robertozanchi/website-optimization) and copy the ```dist``` directory on your local machine
 1. To inspect the site on your phone, you can run a local server
 
   ```bash
