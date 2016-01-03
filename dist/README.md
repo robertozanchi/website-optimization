@@ -24,7 +24,7 @@ Some useful tips to help you get started:
 
 1. Copy the public URL ngrok gives you and run it through [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
 
-### Getting started
+### Optimization
 
 ####Part 1: Optimize Critical Rendering Path for index.html
 
