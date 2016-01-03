@@ -26,7 +26,7 @@ Some useful tips to help you get started:
 
 ### Optimization
 
-####Part 1: Optimize Critical Rendering Path for index.html
+#### Optimize Critical Rendering Path for index.html
 
 The following steps were taken to optimize loading of index.html, to achieve a PageSpeed Insights score > 90:
 
