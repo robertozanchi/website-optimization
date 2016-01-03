@@ -24,23 +24,29 @@ Some useful tips to help you get started:
 
 1. Copy the public URL ngrok gives you and run it through [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
 
-### Optimization
+###Optimization
 
-#### Optimize Critical Rendering Path for index.html
+####Optimize Critical Rendering Path for index.html
 
 The following steps were taken to optimize loading of index.html, to achieve a PageSpeed Insights score > 90:
 
-1. Resize pizzeria.jpeg
+######CSS
 
 1. Replaced CSS in style.css with [minified CSS](http://www.cleancss.com/css-minify/) placed into the page head
 
 1. Added media query ```media="print"``` to print.css
+
+######JavaScript
 
 1. Loaded Google Fonts asyncronously [using JavaScript](https://www.lockedowndesign.com/load-google-fonts-asynchronously-for-page-speed/), replacing render-blocking stylesheet
 
 1. Moved both Google Analytics scripts to the end of the page body
 
 1. Set async property on ```<script src="http://www.google-analytics.com/analytics.js"></script>```
+
+######Images
+
+1. Resize pizzeria.jpeg
 
 ####Part 2: Optimize Frames per Second in pizza.html
 
