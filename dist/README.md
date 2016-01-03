@@ -28,6 +28,8 @@ Some useful tips to help you get started:
 
 ####Part 1: Optimize Critical Rendering Path for index.html
 
+The following steps were taken to optimize loading of index.html, to achieve a PageSpeed Insights score > 90:
+
 1. Moved both Google Analytics scripts to the end of the page body
 
 1. Set async property on ```<script src="http://www.google-analytics.com/analytics.js"></script>```
