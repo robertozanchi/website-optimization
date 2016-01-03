@@ -30,6 +30,8 @@ Some useful tips to help you get started:
 
 The following steps were taken to optimize loading of index.html, to achieve a PageSpeed Insights score > 90:
 
+1. Resize pizzeria.jpeg
+
 1. Replaced CSS in style.css with [minified CSS](http://www.cleancss.com/css-minify/) placed into the page head
 
 1. Added media query ```media="print"``` to print.css
