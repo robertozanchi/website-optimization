@@ -34,7 +34,7 @@ The following steps were taken to optimize loading of index.html, to achieve a P
 
 1. Added media query ```media="print"``` to print.css
 
-1. Loaded Google Fonts asyncronously [using JavaScript](https://www.lockedowndesign.com/load-google-fonts-asynchronously-for-page-speed/)
+1. Loaded Google Fonts asyncronously [using JavaScript](https://www.lockedowndesign.com/load-google-fonts-asynchronously-for-page-speed/), replacing render-blocking stylesheet
 
 1. Moved both Google Analytics scripts to the end of the page body
 
