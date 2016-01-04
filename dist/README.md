@@ -46,16 +46,11 @@ The following steps were taken to optimize loading of index.html, to achieve a P
 
 1. Set async property on ```<script src="http://www.google-analytics.com/analytics.js"></script>```
 
-######Browser Caching
-
-1. Set long expiration for CSS, JavaScript and images through a [.htaccess](http://httpd.apache.org/docs/2.2/howto/htaccess.html) file, to leverage [browser caching](https://developers.google.com/speed/docs/insights/LeverageBrowserCaching)
-
-
 ######Images
 
-1. Compressed all images with a ["lossless"](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization#lossless-vs-lossy-image-compression) compression filter using [Kraken](https://kraken.io/web-interface)
+1. Compressed all images with a ["lossy"](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization#lossless-vs-lossy-image-compression) compression filter using [Kraken](https://kraken.io/web-interface)
 
-1. Resized large images (i.e. pizzeria.jpg) using [Picresize](http://www.picresize.com/)
+1. Created a resized copy of pizzeria.jpg - named pizzeria.sml.jpg - to load on index.html using [Picresize](http://www.picresize.com/)
 
 ####Framerate for pizza.html
 
