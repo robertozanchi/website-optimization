@@ -56,7 +56,7 @@ Other possible steps to increase page loading speed include [leveraging browser 
 
 ####Framerate for pizza.html
 
-To optimize views/pizza.html, I modified views/js/main.js to increase frames per second rate to 60 fps or higher.
+To optimize framerate in views/pizza.html, I modified views/js/main.js to increase frames per second rate to 60 fps or higher.
 
 ######Optimize updatePositions() function in main.js
 
@@ -126,7 +126,7 @@ Optimized code for document.addEventListener()
 
 1. Changed number of sliding pizzas to 50
 
-1. Resized and compressed images/pizza.png
+1. Compressed images/pizza.png
 
 ```js
 // Generates the sliding pizzas when the page loads.
@@ -151,6 +151,47 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ####Resize pizzas in pizza.html
 
+In order to resize the pizzas in under 5ms in pizza.html, changes were made in main.js.
+
 ######Pizza sizes
 
 1. Updated changePizzaSizes()
+
+Source code for changePizzaSizes()
+
+```js
+// Iterates through pizza elements on the page and changes their widths
+function changePizzaSizes(size) {
+for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
+  var dx = determineDx(document.querySelectorAll(".randomPizzaContainer")[i], size);
+  var newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
+  document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
+}
+}
+```
+
+Optimized code for changePizzaSizes()
+
+1. Pulled the determineDx() function out of the loop.
+
+1. Pulled newwidth calculation out of the loop
+
+1. Created a new variable "elements" to hold all pizza elements
+
+1. Looped through elements to apply new width
+
+```js
+// Iterates through pizza elements on the page and changes their widths
+function changePizzaSizes(size) {
+// Pulled determineDx() out of the loop
+var dx = determineDx(document.querySelector(".randomPizzaContainer"), size);
+// Pulled newwidth calculation out of the loop
+var newwidth = (document.querySelector(".randomPizzaContainer").offsetWidth + dx) + 'px';
+// Created a new variable "elements" to hold all pizza elements
+var elements = document.querySelectorAll(".randomPizzaContainer");
+// Loop through elements to apply new width
+for (var i = 0; i < elements.length; i++) {
+  elements[i].style.width = newwidth;
+}
+}
+```
