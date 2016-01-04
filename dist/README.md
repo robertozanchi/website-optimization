@@ -99,12 +99,41 @@ function updatePositions() {
   }
 ```
 
-######Optimize updatePositions() function in main.js
+######Optimize document.addEventListener() function in main.js
 
+Source code for document.addEventListener()
 
+```js
+// Generates the sliding pizzas when the page loads.
+document.addEventListener('DOMContentLoaded', function() {
+  var cols = 8;
+  var s = 256;
+  for (var i = 0; i < 200; i++) {
+    var elem = document.createElement('img');
+    elem.className = 'mover';
+    elem.src = "images/pizza.png";
+    elem.style.height = "100px";
+    elem.style.width = "73.333px";
+    elem.basicLeft = (i % cols) * s;
+    elem.style.top = (Math.floor(i / cols) * s) + 'px';
+    document.querySelector("#movingPizzas1").appendChild(elem);
+  }
+  updatePositions();
+});
+```
+
+Optimized code for document.addEventListener()
+
+1. Changed number of sliding pizzas to 50
+
+1. Resized and compressed images/pizza.png
+
+```js
+
+```
+
+####Resize pizzas in pizza.html
 
 ######Pizza sizes
 
 1. Updated changePizzaSizes()
-
-####Resize pizzas in pizza.html
