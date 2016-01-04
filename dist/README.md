@@ -50,7 +50,7 @@ https://developers.google.com/speed/docs/insights/LeverageBrowserCaching
 
 ######Images
 
-1. Resize pizzeria.jpeg
+1. Resizes large images (i.e. pizzeria.jpg) using [picresize](http://www.picresize.com/)
 
 ####Framerate for pizza.html
 
