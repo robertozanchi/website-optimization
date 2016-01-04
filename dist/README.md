@@ -32,7 +32,7 @@ The following steps were taken to optimize loading of index.html, to achieve a P
 
 ######CSS
 
-1. Inlined [minified CSS](http://www.cleancss.com/css-minify/) into the HTML document head to replace style.css 
+1. Inlined [minified CSS](http://www.cleancss.com/css-minify/) into the HTML document head to avoid loading style.css 
 
 1. Added ```media="print"``` media query attribute to print.css
 
