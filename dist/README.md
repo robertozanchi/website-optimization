@@ -46,7 +46,8 @@ The following steps were taken to optimize loading of index.html, to achieve a P
 
 ######Browser Caching
 
-https://developers.google.com/speed/docs/insights/LeverageBrowserCaching
+1. Set long expiration for CSS, JavaScript and images through a [.htaccess](http://httpd.apache.org/docs/2.2/howto/htaccess.html) file, to leverage [browser caching](https://developers.google.com/speed/docs/insights/LeverageBrowserCaching)
+
 
 ######Images
 
