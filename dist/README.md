@@ -129,7 +129,24 @@ Optimized code for document.addEventListener()
 1. Resized and compressed images/pizza.png
 
 ```js
-
+// Generates the sliding pizzas when the page loads.
+document.addEventListener('DOMContentLoaded', function() {
+  var cols = 8;
+  var s = 256;
+  // Change number of sliding pizzas to 50
+  for (var i = 0; i < 50; i++) {
+    var elem = document.createElement('img');
+    elem.className = 'mover';
+    // Use new resized and compressed image file
+    elem.src = "images/pizza.png";
+    elem.style.height = "100px";
+    elem.style.width = "73.333px";
+    elem.basicLeft = (i % cols) * s;
+    elem.style.top = (Math.floor(i / cols) * s) + 'px';
+    document.querySelector("#movingPizzas1").appendChild(elem);
+  }
+  updatePositions();
+});
 ```
 
 ####Resize pizzas in pizza.html
