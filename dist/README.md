@@ -76,7 +76,7 @@ Optimized code for updatePositions()
 
 1. Moved scrollTop method calculation outside of the loop
 
-1. Applied translateX() and translateZ(0) transform functions to the sliding pizza elements
+1. Applied translateX() and translateZ() transform functions to the sliding pizza elements
 
 ```js
 function updatePositions() {
@@ -88,13 +88,10 @@ function updatePositions() {
 
   for (var i = 0; i < items.length; i++) {
     var phase = Math.sin(scroll + (i % 5));
-    // items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
     var left = -items[i].basicLeft + 1000 * phase + 'px';
-        items[i].style.transform = "translateX("+left+") translateZ(0)";
+    items[i].style.transform = "translateX("+left+") translateZ(0)";
   }
 ```
-
-
 
 To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js. 
 
