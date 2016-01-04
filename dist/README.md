@@ -56,11 +56,14 @@ Other possible steps to increase page loading speed include [leveraging browser 
 
 ####Framerate for pizza.html
 
-######updatePositions()
+To optimize views/pizza.html, I modified views/js/main.js to increase frames per second rate to 60 fps or higher.
+
+######Optimize updatePositions() function in main.js
 
 Source code for updatePositions()
 
 ```js
+// Moves the sliding background pizzas based on scroll position
 function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
@@ -79,24 +82,28 @@ Optimized code for updatePositions()
 1. Applied translateX() and translateZ() transform functions to the sliding pizza elements
 
 ```js
+// Moves the sliding background pizzas based on scroll position
 function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
   var items = document.querySelectorAll('.mover');
+  // Move scrollTop calculation outside of the loop
   var scroll = (document.body.scrollTop / 1250);
 
   for (var i = 0; i < items.length; i++) {
     var phase = Math.sin(scroll + (i % 5));
     var left = -items[i].basicLeft + 1000 * phase + 'px';
+    // Applies translateX and translateZ transform functions
     items[i].style.transform = "translateX("+left+") translateZ(0)";
   }
 ```
 
-To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js. 
+######Optimize updatePositions() function in main.js
+
+
 
 ######Pizza sizes
-
 
 1. Updated changePizzaSizes()
 
