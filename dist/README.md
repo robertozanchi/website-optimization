@@ -32,15 +32,15 @@ The following steps were taken to optimize loading of index.html, to achieve a P
 
 ######CSS
 
-1. Inlined [minified CSS](http://www.cleancss.com/css-minify/) into the page head to replace style.css 
+1. Inlined [minified CSS](http://www.cleancss.com/css-minify/) into the HTML document head to replace style.css 
 
-1. Added media query ```media="print"``` to print.css
+1. Added ```media="print"``` media query attribute to print.css
 
 ######JavaScript
 
 1. Loaded Google Fonts asyncronously [using JavaScript](https://www.lockedowndesign.com/load-google-fonts-asynchronously-for-page-speed/), replacing render-blocking stylesheet
 
-1. Moved both Google Analytics scripts to the end of the page body
+1. Moved Google Analytics scripts to the end of the HTML document body to defer loading
 
 1. Set async property on ```<script src="http://www.google-analytics.com/analytics.js"></script>```
 
