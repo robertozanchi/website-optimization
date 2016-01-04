@@ -50,7 +50,9 @@ https://developers.google.com/speed/docs/insights/LeverageBrowserCaching
 
 ######Images
 
-1. Resized and compressed large images (i.e. pizzeria.jpg) using [Picresize](http://www.picresize.com/) and [Kraken](https://kraken.io/web-interface)
+1. Compressed all images with a ["lossless"](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization#lossless-vs-lossy-image-compression) compression filter using [Kraken](https://kraken.io/web-interface)
+
+1. Resized large images (i.e. pizzeria.jpg) using [Picresize](http://www.picresize.com/)
 
 ####Framerate for pizza.html
 
